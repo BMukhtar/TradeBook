@@ -1,11 +1,12 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/back_grey</item>
+        <item name="colorPrimaryDark">@color/back_grey</item>
+        <item name="colorAccent">@color/back_grey</item>
+        <item name="android:actionBarStyle">@style/MyTheme.ActionBarStyle</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -13,8 +14,19 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="android:actionBarStyle">@style/MyTheme.ActionBarStyle</item>
+    </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="MyTheme.ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/black</item>
+    </style>
 
 </resources>

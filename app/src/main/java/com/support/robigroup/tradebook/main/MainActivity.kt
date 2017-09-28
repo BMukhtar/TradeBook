@@ -1,4 +1,4 @@
-package com.support.robigroup.tradebook
+package com.support.robigroup.tradebook.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,13 +7,13 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import com.jaredrummler.materialspinner.MaterialSpinner
-
+import com.support.robigroup.tradebook.tovar_list.CheckActivity
+import com.support.robigroup.tradebook.R
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     fun onClickNewSale(v: View){
-        startActivity(Intent(this,CheckActivity::class.java))
+        startActivity(Intent(this, CheckActivity::class.java))
     }
 
 

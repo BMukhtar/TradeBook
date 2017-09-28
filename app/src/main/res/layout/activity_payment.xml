@@ -4,6 +4,209 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.support.robigroup.tradebook.PaymentActivity">
+    android:background="@color/back_grey"
+    tools:context="com.support.robigroup.tradebook.PaymentActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_margin="5dp"
+            android:text="4650 T" />
+
+        <TextView
+            android:id="@+id/tl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_margin="5dp"
+            android:text="Итого без скидки" />
+
+        <TextView
+            android:id="@+id/ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_margin="5dp"
+            android:text="Скидка" />
+
+        <TextView
+            android:id="@+id/mr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_margin="5dp"
+            android:text="30% * 1850T" />
+
+        <TextView
+            android:id="@+id/bl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="5dp"
+            android:text="К оплате" />
+
+        <TextView
+            android:id="@+id/br"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="5dp"
+            android:text="3280 Т"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Выберите метод оплаты"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="228dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl2">
+
+        <ImageView
+            android:id="@+id/nl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_menu_camera" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_menu_send" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/nl"
+            android:layout_toRightOf="@+id/nl"
+            android:text="Картой" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33">
+
+        <ImageView
+            android:id="@+id/nl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_menu_camera" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_menu_send" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/nl"
+            android:layout_toRightOf="@+id/nl"
+            android:text="Наличными" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <ImageView
+            android:id="@+id/nl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_menu_camera" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_menu_send" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/nl"
+            android:layout_toRightOf="@+id/nl"
+            android:text="В долг" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

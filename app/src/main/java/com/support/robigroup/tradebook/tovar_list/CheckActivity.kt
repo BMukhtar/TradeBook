@@ -1,13 +1,12 @@
-package com.support.robigroup.tradebook
+package com.support.robigroup.tradebook.tovar_list
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import com.support.robigroup.tradebook.adapter.MyAdapter
+import com.support.robigroup.tradebook.R
 import com.support.robigroup.tradebook.adapter.Tovar
 import kotlinx.android.synthetic.main.activity_check.*
 import java.util.ArrayList
-import kotlin.properties.Delegates
 
 class CheckActivity : AppCompatActivity() {
 
@@ -17,6 +16,8 @@ class CheckActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check)
+        supportActionBar?.title = "Чек"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val tovar1 = Tovar("Coca-Cola Zero, 1л", "Без скидки", "260")
         val tovar2 = Tovar("Печенья Орео, мягкая упаковка, 250 гр", "Без скидки", "1000")
