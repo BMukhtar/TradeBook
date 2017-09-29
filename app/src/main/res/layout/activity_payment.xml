@@ -33,11 +33,12 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            android:id="@+id/no_ski"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|right"
             android:layout_margin="5dp"
-            android:text="4650 T" />
+            android:text="3060" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,11 +55,12 @@
             android:text="Скидка" />
 
         <TextView
+            android:id="@+id/ski"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
             android:layout_margin="5dp"
-            android:text="30% * 1850T" />
+            android:text="10% * 3060T" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,11 +70,12 @@
             android:text="К оплате" />
 
         <TextView
+            android:id="@+id/with_ski"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
             android:layout_margin="5dp"
-            android:text="3280 Т"
+            android:text="2754.00"
             android:textSize="20sp" />
     </FrameLayout>
 

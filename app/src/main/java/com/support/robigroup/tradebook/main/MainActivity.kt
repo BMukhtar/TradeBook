@@ -1,5 +1,6 @@
 package com.support.robigroup.tradebook.main
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -15,6 +16,9 @@ import com.support.robigroup.tradebook.R
 import com.support.robigroup.tradebook.camera.SimpleScannerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import android.content.pm.PackageManager
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -45,7 +49,37 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     fun onClickNewSale(v: View){
-        startActivity(Intent(this, SimpleScannerActivity::class.java))
+        checkCamera()
+
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int,
+                                            permissions: Array<String>, grantResults: IntArray) {
+        when (requestCode) {
+            MY_PERMISSIONS_REQUEST_CAMERA-> {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    startActivity(Intent(this, SimpleScannerActivity::class.java))
+                } else {
+                    checkCamera()
+                }
+                return
+            }
+        }// other 'case' lines to check for other
+        // permissions this app might request
+    }
+
+    fun checkCamera(){
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    Array(1){Manifest.permission.CAMERA},
+                    MY_PERMISSIONS_REQUEST_CAMERA)
+
+        }else{
+            startActivity(Intent(this, SimpleScannerActivity::class.java))
+        }
     }
 
 
@@ -74,6 +108,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     companion object {
+        val MY_PERMISSIONS_REQUEST_CAMERA = 12
         fun open (con: Context){
             val intent = Intent(con,MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)

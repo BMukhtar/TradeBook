@@ -17,6 +17,8 @@ class ChequeActivity : AppCompatActivity() {
 
     private var mDataSet = ArrayList<Tovar>()
     lateinit var mAdapter: MyAdapter
+    private var mPrice = 0.0
+    private var mSkidka = 10.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,22 +27,30 @@ class ChequeActivity : AppCompatActivity() {
         supportActionBar?.title = "Чек"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val tovar1 = Tovar(R.drawable.image_cola,"Coca-Cola Zero, 1л", "Без скидки", "260")
-        val tovar2 = Tovar(R.drawable.image_oreo,"Печенья Орео", "Без скидки", "1000")
-        val tovar3 = Tovar(R.drawable.image_shampan,"Советское шампаское", "Скидка 50%", "1800")
+        val tovar1 = Tovar(R.drawable.image_cola,"Coca-Cola Zero, 1л", "Без скидки", 260)
+        val tovar2 = Tovar(R.drawable.image_oreo,"Печенья Орео", "Без скидки", 1000)
+        val tovar3 = Tovar(R.drawable.image_shampan,"Советское шампаское", "Скидка 50%", 1800)
 
         mDataSet.add(tovar1)
         mDataSet.add(tovar2)
         mDataSet.add(tovar3)
 
-        mAdapter = MyAdapter(mDataSet)
+        mAdapter = MyAdapter(this,mDataSet)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = mAdapter
+        updatePayPrice()
+    }
+
+    fun updatePayPrice(){
+        mPrice = mAdapter.getTotalPrice()
+        itog.text = mPrice.toString()
+        skidka.text = mSkidka.toString()
+        res.text = String.format("%.2f ",getPayPrice(mPrice,mSkidka))
     }
 
     fun payAmount(v: View){
-        PaymentActivity.open(this,"3280")
+        PaymentActivity.open(this,mPrice,mSkidka)
     }
 
     companion object {
@@ -50,6 +60,9 @@ class ChequeActivity : AppCompatActivity() {
             intent.putExtra(ARG_OPLATA, oplata)
             con.startActivity(intent)
 
+        }
+        fun getPayPrice(noSki: Double, ski: Double): Double{
+            return (noSki*(100-ski)/100)
         }
     }
 }

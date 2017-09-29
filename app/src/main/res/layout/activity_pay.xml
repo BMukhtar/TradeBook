@@ -33,16 +33,17 @@
         android:text="Сдача"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        app:layout_constraintTop_toBottomOf="@+id/editClientMoney" />
 
-    <TextView
-        android:id="@+id/textView22"
+    <EditText
+        android:inputType="numberSigned"
+        android:id="@+id/editClientMoney"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@android:color/white"
         android:gravity="center"
-        android:text="5000"
+        android:hint="@string/enter_amount"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,10 +52,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
+        android:id="@+id/text_sdacha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="1720 Т"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
