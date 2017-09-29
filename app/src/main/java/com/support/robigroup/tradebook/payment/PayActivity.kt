@@ -10,7 +10,7 @@ import com.support.robigroup.tradebook.R
 import kotlinx.android.synthetic.main.activity_pay.*
 import android.text.Editable
 import android.text.TextWatcher
-
+import android.view.MenuItem
 
 
 class PayActivity : AppCompatActivity() {
@@ -23,10 +23,10 @@ class PayActivity : AppCompatActivity() {
         setContentView(R.layout.activity_pay)
         setSupportActionBar(toolbar)
 
+        price = intent.getDoubleExtra(ARG_AMOUNT,0.0)
 
         supportActionBar?.title = String.format("%s %.2f т",getString(R.string.to_pay),price)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        price = intent.getDoubleExtra(ARG_AMOUNT,0.0)
         if(price==0.0){
             Snackbar.make(findViewById(android.R.id.content),"An Error Occured", Snackbar.LENGTH_SHORT)
             finish()
@@ -41,6 +41,17 @@ class PayActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable) {}
         })
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
 
     fun updateSurrender(amount: String){
         val am = amount.toDouble()

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import com.support.robigroup.tradebook.R
 import com.support.robigroup.tradebook.tovar_list.ChequeActivity
@@ -25,10 +26,17 @@ class PaymentActivity : AppCompatActivity() {
         ski.text = String.format("%.2f * %.2f",mSki,mNoSki)
         no_ski.text = String.format("%.2f",mNoSki)
         with_ski.text = String.format("%.2f",mWithScki)
+    }
 
 
-
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
     }
 
     fun openPayActivity(v: View){

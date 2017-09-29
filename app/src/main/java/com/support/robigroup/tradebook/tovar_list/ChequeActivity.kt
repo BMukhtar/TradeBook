@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.MenuItem
 import android.view.View
 import com.support.robigroup.tradebook.R
 import com.support.robigroup.tradebook.adapter.Tovar
@@ -51,6 +52,16 @@ class ChequeActivity : AppCompatActivity() {
 
     fun payAmount(v: View){
         PaymentActivity.open(this,mPrice,mSkidka)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
     }
 
     companion object {
