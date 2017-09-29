@@ -23,10 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tovar_list.ChequeActivity" />
-        <activity android:name=".payment.PaymentActivity" />
-        <activity android:name=".payment.PayActivity" />
-        <activity android:name=".payment.PaymentResult"/>
+        <activity android:name=".tovar_list.ChequeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".payment.PaymentActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".payment.PayActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".payment.PaymentResult"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".camera.SimpleScannerActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>

@@ -62,7 +62,6 @@
             app:layout_constraintVertical_bias="0.85">
 
             <ImageButton
-                android:id="@+id/imageButton"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
@@ -97,7 +96,6 @@
             app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginRight="16dp"

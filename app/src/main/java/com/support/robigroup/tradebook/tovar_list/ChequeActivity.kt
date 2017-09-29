@@ -21,6 +21,7 @@ class ChequeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check)
+        setSupportActionBar(toolbar)
         supportActionBar?.title = "Чек"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

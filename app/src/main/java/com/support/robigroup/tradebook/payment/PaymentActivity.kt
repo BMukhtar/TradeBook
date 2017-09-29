@@ -6,12 +6,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.support.robigroup.tradebook.R
+import kotlinx.android.synthetic.main.activity_payment.*
 
 class PaymentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
+        setSupportActionBar(toolbar)
         supportActionBar?.title = "Оплата"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }

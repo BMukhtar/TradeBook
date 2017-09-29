@@ -25,7 +25,6 @@
                 app:cardCornerRadius="@dimen/card_corner">
 
                 <ImageView
-                    android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center_vertical"
@@ -33,7 +32,6 @@
                     app:srcCompat="@drawable/ic_right_white" />
 
                 <ImageView
-                    android:id="@+id/imageView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left|center_vertical"
@@ -41,7 +39,6 @@
                     app:srcCompat="@drawable/ic_new_sale_white" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

@@ -3,15 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group
-        android:id="@+id/menu_bottom"
-        android:checkableBehavior="none">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/prixod"
-            android:title="Главная" />
-    </group>
-
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_gallery"
@@ -19,15 +10,13 @@
             android:title="Новая продажа" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_product"
             android:title="Товары и Услуги" />
         <item
-            android:id="@+id/nav_otchet"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_report"
             android:title="Отчет" />
         <item
-            android:id="@+id/nav_transaction_history"
-            android:icon="@drawable/ic_transaction"
+            android:icon="@drawable/ic_histori"
             android:title="История транзакций" />
         <item
             android:id="@+id/nav_manage"
@@ -35,23 +24,17 @@
             android:title="Должники" />
         <item
             android:id="@+id/nav_share"
-            android:icon="@drawable/ic_arr_down"
+            android:icon="@drawable/ic_icnome_dollar"
             android:title="Приход товара" />
         <item
             android:id="@+id/nav_send"
-            android:icon="@drawable/ic_arr_up"
+            android:icon="@drawable/ic_outcome_dollar"
             android:title="Админ расходы" />
         <item
-            android:id="@+id/nav_create_qr"
-            android:icon="@drawable/ic_qr"
+            android:icon="@drawable/ic_qr_code"
             android:title="Создать QR, штрих-код" />
         <item
-            android:id="@+id/nav_magazin"
-            android:icon="@drawable/ic_menu_share"
-            android:title="Помощь" />
-        <item
-            android:id="@+id/nav_not"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/ic_help"
             android:title="Помощь" />
     </group>
 </menu>

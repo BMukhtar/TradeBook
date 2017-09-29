@@ -9,19 +9,30 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginTop="0dp"
         android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/tr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|right"
@@ -29,7 +40,6 @@
             android:text="4650 T" />
 
         <TextView
-            android:id="@+id/tl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|left"
@@ -37,7 +47,6 @@
             android:text="Итого без скидки" />
 
         <TextView
-            android:id="@+id/ml"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_vertical"
@@ -45,7 +54,6 @@
             android:text="Скидка" />
 
         <TextView
-            android:id="@+id/mr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
@@ -53,7 +61,6 @@
             android:text="30% * 1850T" />
 
         <TextView
-            android:id="@+id/bl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
@@ -61,7 +68,6 @@
             android:text="К оплате" />
 
         <TextView
-            android:id="@+id/br"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
@@ -107,7 +113,6 @@
             app:srcCompat="@drawable/ic_card" />
 
         <ImageView
-            android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -117,7 +122,6 @@
             app:srcCompat="@drawable/ic_right_black" />
 
         <TextView
-            android:id="@+id/textView34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -139,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView33">
 
         <ImageView
-            android:id="@+id/nl"
+            android:id="@+id/nl1"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentLeft="true"
@@ -149,7 +153,6 @@
             app:srcCompat="@drawable/ic_nalichki" />
 
         <ImageView
-            android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -159,18 +162,16 @@
             app:srcCompat="@drawable/ic_right_black" />
 
         <TextView
-            android:id="@+id/textView34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            android:layout_toEndOf="@+id/nl"
-            android:layout_toRightOf="@+id/nl"
+            android:layout_toEndOf="@+id/nl1"
+            android:layout_toRightOf="@+id/nl1"
             android:text="Наличными" />
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/rl3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -182,7 +183,7 @@
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
         <ImageView
-            android:id="@+id/nl"
+            android:id="@+id/nl2"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentLeft="true"
@@ -192,7 +193,6 @@
             app:srcCompat="@drawable/ic_money_on_hand" />
 
         <ImageView
-            android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -202,13 +202,12 @@
             app:srcCompat="@drawable/ic_right_black" />
 
         <TextView
-            android:id="@+id/textView34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            android:layout_toEndOf="@+id/nl"
-            android:layout_toRightOf="@+id/nl"
+            android:layout_toEndOf="@+id/nl2"
+            android:layout_toRightOf="@+id/nl2"
             android:text="В долг" />
     </RelativeLayout>
 

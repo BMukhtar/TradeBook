@@ -1,10 +1,9 @@
 <resources>
-    <string name="app_name">TradeBook</string>
+    <string name="app_name">UIB</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
     <string name="acion_pay">Завершить продажу</string>
     <string name="text_payment_closed">Продажа завершена</string>
     <string name="new_sale">Новая продажа</string>
