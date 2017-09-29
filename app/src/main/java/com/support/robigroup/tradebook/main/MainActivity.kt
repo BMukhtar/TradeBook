@@ -1,19 +1,20 @@
 package com.support.robigroup.tradebook.main
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
+import android.support.design.widget.Snackbar
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
+import com.jaredrummler.materialspinner.MaterialSpinner
+import com.support.robigroup.tradebook.R
+import com.support.robigroup.tradebook.camera.SimpleScannerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import com.jaredrummler.materialspinner.MaterialSpinner
-import com.support.robigroup.tradebook.tovar_list.CheckActivity
-import com.support.robigroup.tradebook.R
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     fun onClickNewSale(v: View){
-        startActivity(Intent(this, CheckActivity::class.java))
+        startActivity(Intent(this, SimpleScannerActivity::class.java))
     }
 
 
@@ -73,5 +74,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    companion object {
+        fun open (con: Context){
+            val intent = Intent(con,MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            con.startActivity(intent)
+        }
     }
 }

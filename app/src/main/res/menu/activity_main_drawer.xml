@@ -8,15 +8,15 @@
         android:checkableBehavior="none">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/prixod"
             android:title="Главная" />
     </group>
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Новая Продажа" />
+            android:icon="@drawable/ic_new_sale_black"
+            android:title="Новая продажа" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
@@ -27,19 +27,31 @@
             android:title="Отчет" />
         <item
             android:id="@+id/nav_transaction_history"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_transaction"
             android:title="История транзакций" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_money_on_hand"
             android:title="Должники" />
         <item
             android:id="@+id/nav_share"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/ic_arr_down"
             android:title="Приход товара" />
         <item
             android:id="@+id/nav_send"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/ic_arr_up"
             android:title="Админ расходы" />
+        <item
+            android:id="@+id/nav_create_qr"
+            android:icon="@drawable/ic_qr"
+            android:title="Создать QR, штрих-код" />
+        <item
+            android:id="@+id/nav_magazin"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Помощь" />
+        <item
+            android:id="@+id/nav_not"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Помощь" />
     </group>
 </menu>

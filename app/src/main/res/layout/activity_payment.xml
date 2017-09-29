@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_grey"
-    tools:context="com.support.robigroup.tradebook.PaymentActivity"
+    tools:context="com.support.robigroup.tradebook.payment.PaymentActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp">
 
@@ -90,6 +90,7 @@
         android:layout_marginBottom="228dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/white"
+        android:onClick="openPayActivity"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -97,13 +98,13 @@
 
         <ImageView
             android:id="@+id/nl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            app:srcCompat="@drawable/ic_menu_camera" />
+            app:srcCompat="@drawable/ic_card" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -113,7 +114,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            app:srcCompat="@drawable/ic_menu_send" />
+            app:srcCompat="@drawable/ic_right_black" />
 
         <TextView
             android:id="@+id/textView34"
@@ -131,6 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:onClick="openPayActivity"
         android:background="@android:color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -138,13 +140,13 @@
 
         <ImageView
             android:id="@+id/nl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            app:srcCompat="@drawable/ic_menu_camera" />
+            app:srcCompat="@drawable/ic_nalichki" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -154,7 +156,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            app:srcCompat="@drawable/ic_menu_send" />
+            app:srcCompat="@drawable/ic_right_black" />
 
         <TextView
             android:id="@+id/textView34"
@@ -172,6 +174,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:onClick="openPayActivity"
         android:background="@android:color/white"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -180,13 +183,13 @@
 
         <ImageView
             android:id="@+id/nl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            app:srcCompat="@drawable/ic_menu_camera" />
+            app:srcCompat="@drawable/ic_money_on_hand" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -196,7 +199,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            app:srcCompat="@drawable/ic_menu_send" />
+            app:srcCompat="@drawable/ic_right_black" />
 
         <TextView
             android:id="@+id/textView34"

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.support.robigroup.tradebook.PaymentActivity
+import com.support.robigroup.tradebook.payment.PaymentActivity
 import com.support.robigroup.tradebook.R
 import com.support.robigroup.tradebook.adapter.Tovar
 import java.util.ArrayList
@@ -16,11 +16,13 @@ class MyAdapter(private var mDataSet: ArrayList<Tovar>) : RecyclerView.Adapter<M
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.mNameText.text = mDataSet[position].name
-        holder.mDescText.text = mDataSet[position].skidka
-        holder.mPrice.text = mDataSet[position].price + " тенге"
+        val item = mDataSet[position]
+        holder.mNameText.text = item.name
+        holder.mDescText.text = item.skidka
+        holder.mPrice.text = item.price + " тенге"
+        holder.mImage.setImageResource(item.image)
         holder.itemView.setOnClickListener {
-            holder.itemView.context.startActivity(Intent(holder.itemView.context,PaymentActivity::class.java))
+            holder.itemView.context.startActivity(Intent(holder.itemView.context, PaymentActivity::class.java))
         }
     }
 

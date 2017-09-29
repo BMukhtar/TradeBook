@@ -5,4 +5,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="acion_pay">Завершить продажу</string>
+    <string name="text_payment_closed">Продажа завершена</string>
+    <string name="new_sale">Новая продажа</string>
+    <string name="printout_check">Распечатать товарный Чек</string>
+    <string name="to_pay">К оплате</string>
+    <string name="go_to_pay">Перейти к оплате</string>
 </resources>
